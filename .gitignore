@@ -1,0 +1,10 @@
+# ignore some root files
+gradlew
+gradlew.bat
+
+# Ignore every subfolder (every mod
+*/
+
+# ONLY include these folders:   tmpl  and its contents
+!tmpl/
+!tmpl/**
