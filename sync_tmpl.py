@@ -14,7 +14,6 @@ Usage:
 """
 
 import argparse
-import filecmp
 import os
 import shutil
 import sys
@@ -50,6 +49,29 @@ def iter_tmpl_files():
             yield rel, src
 
 
+UTF8_BOM = b'\xef\xbb\xbf'
+
+
+def _read_no_bom(path):
+    with open(path, 'rb') as f:
+        data = f.read()
+    return data[len(UTF8_BOM):] if data.startswith(UTF8_BOM) else data
+
+
+def _cmp_strip_bom(src, dst):
+    """Return True if dst already matches what we would write (src with BOM stripped)."""
+    with open(dst, 'rb') as f:
+        dst_data = f.read()
+    return _read_no_bom(src) == dst_data
+
+
+def _copy_strip_bom(src, dst):
+    """Copy src to dst, stripping a leading UTF-8 BOM if present."""
+    with open(dst, 'wb') as f:
+        f.write(_read_no_bom(src))
+    shutil.copystat(src, dst)
+
+
 def sync(dry_run=False, only=None, check=False):
     mods = list(iter_mods(only))
     if not mods:
@@ -62,14 +84,14 @@ def sync(dry_run=False, only=None, check=False):
     for mod_name, mod_path in mods:
         for rel, src in iter_tmpl_files():
             dst = os.path.join(mod_path, rel)
-            if os.path.isfile(dst) and filecmp.cmp(src, dst, shallow=False):
+            if os.path.isfile(dst) and _cmp_strip_bom(src, dst):
                 unchanged += 1
                 continue
             status = 'ADD   ' if not os.path.isfile(dst) else 'UPDATE'
             print(f"  {status}  {mod_name}/{rel}")
             if not dry_run and not check:
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
-                shutil.copy2(src, dst)
+                _copy_strip_bom(src, dst)
             changed += 1
 
     verb = 'Would change' if (dry_run or check) else 'Changed'

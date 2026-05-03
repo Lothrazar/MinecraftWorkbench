@@ -1,4 +1,4 @@
-﻿Minecraft Version: 
+Minecraft Version: 
 
 Forge Version: 
 
