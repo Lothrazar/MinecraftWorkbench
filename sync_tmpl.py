@@ -24,6 +24,14 @@ TMPL = os.path.join(ROOT, 'tmpl')
 # Top-level dirs that are not mod subprojects
 SKIP_DIRS = {'build', 'gradle', 'tmpl', '.gradle', '.idea', '.git', '__pycache__'}
 
+# Per-mod files that sync should never overwrite (relative paths, as yielded by iter_tmpl_files)
+SKIP_FILES = {
+    'AutoRun': {
+        os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
+        os.path.join('build.gradle'),
+    },
+}
+
 
 def iter_mods(only=None):
     """Yield (name, abs_path) for every mod subfolder."""
@@ -83,6 +91,9 @@ def sync(dry_run=False, only=None, check=False):
 
     for mod_name, mod_path in mods:
         for rel, src in iter_tmpl_files():
+            if rel in SKIP_FILES.get(mod_name, set()):
+                print(f"  SKIP    {mod_name}/{rel}")
+                continue
             dst = os.path.join(mod_path, rel)
             if os.path.isfile(dst) and _cmp_strip_bom(src, dst):
                 unchanged += 1
