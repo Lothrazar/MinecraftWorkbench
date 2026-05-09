@@ -252,5 +252,91 @@
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "potato-bread",
     "modrinth_id": ""
+  },
+  {
+    "id": "cobblestoney",
+    "name": "cobblestoney",
+    "description": "Cobbled versions of granite/andesite/etc blocks are dropped, also new stone and mud block variants are added ",
+    "category": "world",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "cobblestoney",
+    "modrinth_id": ""
+  },
+  {
+    "id": "villagertools",
+    "name": "Villager Artifacts",
+    "description": "Make villagers more useful with many items to use and improve them",
+    "category": "tools",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "villager-tools",
+    "modrinth_id": "villager-tools"
+  },
+  {
+    "id": "tinylightbulbs",
+    "name": "Tiny Light Bulbs",
+    "description": "Adds tiny light bulbs in the game, dyeable after you place them",
+    "category": "building",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "tiny-light-bulbs",
+    "modrinth_id": "tiny-light-bulbs"
+  },
+  {
+    "id": "invcrafting",
+    "name": "Inventory Crafting Grid",
+    "description": "Inventory crafting is now 3x3",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "inventory-crafting-grid",
+    "modrinth_id": ""
+  },
+  {
+    "id": "nutsandfruit",
+    "name": "NutsAndFruit",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "nuts-and-fruit",
+    "modrinth_id": ""
+  },
+  {
+    "id": "angermanagement",
+    "name": "Anger Management",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.16.5"],
+    "curse_slug": "anger-management",
+    "modrinth_id": ""
+  },
+
+  {
+    "id": "tamedrespawn",
+    "name": "tamedrespawn",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.19.2"],
+    "curse_slug": "tamedrespawn",
+    "modrinth_id": ""
+  },
+
+  {
+    "id": "unbreakablespawner",
+    "name": "UnbreakableSpawner",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "unbreakable-spawner",
+    "modrinth_id": ""
+  },
+  {
+    "id": "dimension-stacking-rifts",
+    "name": "dimension-stacking-rifts",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.17"],
+    "curse_slug": "dimension-stacking-rifts",
+    "modrinth_id": ""
   }
+
+
+
 ]
