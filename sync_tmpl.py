@@ -30,6 +30,9 @@ SKIP_FILES = {
         os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
         os.path.join('build.gradle'),
     },
+    '*': {
+        os.path.join('README.md'),
+    },
 }
 
 
@@ -91,6 +94,8 @@ def sync(dry_run=False, only=None, check=False):
 
     for mod_name, mod_path in mods:
         for rel, src in iter_tmpl_files():
+            if rel in SKIP_FILES.get('*', set()):
+                continue
             if rel in SKIP_FILES.get(mod_name, set()):
                 print(f"  SKIP    {mod_name}/{rel}")
                 continue
