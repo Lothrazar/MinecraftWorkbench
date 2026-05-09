@@ -8,3 +8,6 @@ gradlew.bat
 # ONLY include these folders:   tmpl  and its contents
 !tmpl/
 !tmpl/**
+
+!docs/
+!docs/**

@@ -1,0 +1,7 @@
+[
+  { "id": "building", "label": "Building & Construction" },
+  { "id": "world",    "label": "World & Nature" },
+  { "id": "tweaks",   "label": "QoL & Tweaks" },
+  { "id": "tools",    "label": "Tools & Automation" },
+  { "id": "items",    "label": "Items & Enchanting" }
+]
