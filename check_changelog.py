@@ -5,7 +5,7 @@ minecraft_version = "1.21.1"
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-SKIP = {"tmpl", "build", "gradle"}
+SKIP = {"tmpl", "build", "gradle", "docs"}
 
 results = []
 

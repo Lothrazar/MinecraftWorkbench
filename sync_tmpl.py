@@ -22,7 +22,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 TMPL = os.path.join(ROOT, 'tmpl')
 
 # Top-level dirs that are not mod subprojects
-SKIP_DIRS = {'build', 'gradle', 'tmpl', '.gradle', '.idea', '.git', '__pycache__'}
+SKIP_DIRS = {'build', 'gradle', 'tmpl', 'docs', '.gradle', '.idea', '.git', '__pycache__'}
 
 # Per-mod files that sync should never overwrite (relative paths, as yielded by iter_tmpl_files)
 SKIP_FILES = {

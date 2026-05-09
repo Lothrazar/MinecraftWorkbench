@@ -1,6 +1,7 @@
 import os
 
-ROOT = r"C:\Users\USER\MyFiles\mc121"
+# alternately you can set a direct path such as = r"C:\Users\USER\MyFiles\mc121"
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
 OLD = """tasks.named('wrapper', Wrapper).configure {
     // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
