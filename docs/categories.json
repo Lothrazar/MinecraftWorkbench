@@ -1,7 +1,13 @@
 [
-  { "id": "building", "label": "Building & Construction" },
-  { "id": "world",    "label": "World & Nature" },
-  { "id": "tweaks",   "label": "QoL & Tweaks" },
-  { "id": "tools",    "label": "Tools & Automation" },
-  { "id": "items",    "label": "Items & Enchanting" }
+  { "id": "building", "label": "Blocks / Decoration" },
+  { "id": "farming",  "label": "Farming" },
+  { "id": "tech",     "label": "High Tech" },
+  { "id": "items",    "label": "Items" },
+      { "id": "magic",    "label": "Magic" },
+      { "id": "nature",   "label": "Nature" },
+  { "id": "mobs",     "label": "Mobs" },
+  { "id": "tools",    "label": "Tools" },
+  { "id": "tweaks",   "label": "Tweaks" },
+  { "id": "world",    "label": "World Generation" }
+
 ]

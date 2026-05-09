@@ -30,7 +30,7 @@
     "id": "glasscutter",
     "name": "Glass Cutter",
     "description": "New tool that insta-mines glass and harvests it with no silk tocuh needed.",
-    "category": "building",
+    "category": "tools",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "glass-cutter",
     "modrinth_id": "glass-cutter"
@@ -54,6 +54,24 @@
     "modrinth_id": ""
   },
   {
+    "id": "cyclic",
+    "name": "Cyclic",
+    "description": "Adds way too much content",
+    "category": "tech",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "cyclic",
+    "modrinth_id": ""
+  },
+  {
+    "id": "storagenetwork",
+    "name": "Simple Storage Network",
+    "description": "Network connected chests for mass storage",
+    "category": "tech",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "storagenetwork",
+    "modrinth_id": ""
+  },
+  {
     "id": "oceanfloor",
     "name": "Ocean Floor Control",
     "description": "Configure clay, sand, and gravel features to on the ocean floor, a throwback to old world generation before everything was gravel.",
@@ -66,7 +84,7 @@
     "id": "veincreeper",
     "name": "Vein Creeper",
     "description": "Creepers that convert stone into ore when detonated.",
-    "category": "world",
+    "category": "mobs",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "vein-creeper",
     "modrinth_id": "vein-creeper"
@@ -75,7 +93,7 @@
     "id": "creeperheal",
     "name": "Creeper Heal",
     "description": "Terrain damaged by creeper explosions gradually heals itself back.",
-    "category": "world",
+    "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "forge-creeper-heal-unofficial",
     "modrinth_id": "creeper-heal"
@@ -85,7 +103,7 @@
     "name": "Let Them Grow",
     "__comment": "TODO: upgrade refactor split here ",
     "description": "A small mod to slow down growth of crops and livestock.",
-    "category": "world",
+    "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "let-them-grow",
     "modrinth_id": ""
@@ -94,7 +112,7 @@
     "id": "absentbydesign",
     "name": "Absent by Design",
     "description": "Add stairs, walls, slabs, fences to existing blocks, fully resource pack compatible.",
-    "category": "tweaks",
+    "category": "building",
     "minecraft_versions": ["1.21.1", "1.20.1"],
     "curse_slug": "absent-by-design",
     "modrinth_id": "absent-by-design"
@@ -148,7 +166,7 @@
     "id": "fixmyminecart",
     "name": "Phantom Minecart",
     "description": "Ads one improved minecart that can travel directly through all other entities and carts like magic.",
-    "category": "tweaks",
+    "category": "tools",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "fix-my-minecart",
     "modrinth_id": ""
@@ -175,7 +193,7 @@
     "id": "autoplant",
     "name": "Auto Plant",
     "description": "Sapling items auto plant themselves they despawn on viable grass.",
-    "category": "tools",
+    "category": "tweaks",
     "minecraft_versions": ["1.21.1","1.20.1"],
     "curse_slug": "auto-plant",
     "modrinth_id": "auto-plant"
@@ -184,7 +202,7 @@
     "id": "gardentools",
     "name": "Garden Tools",
     "description": "Specialised tools that make tilling, planting, and harvesting faster.",
-    "category": "tools",
+    "category": "farming",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "garden-tools",
     "modrinth_id": "gardening-tools"
@@ -193,7 +211,7 @@
     "id": "strongfarmland",
     "name": "Stronger Farmland",
     "description": "Farmland, anytime that it is wet, will resist being trampled by players and mobs.",
-    "category": "tools",
+    "category": "farming",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "stronger-farmland",
     "modrinth_id": "stronger-farmland"
@@ -202,7 +220,7 @@
     "id": "scraps",
     "name": "Scraps",
     "description": "Turn leftover and partial resources into useful crafting materials, junk piles spawn in world.",
-    "category": "tools",
+    "category": "world",
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "scraps",
     "modrinth_id": ""
