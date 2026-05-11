@@ -26,7 +26,13 @@ SKIP_DIRS = {'build', 'gradle', 'tmpl', 'docs', '.gradle', '.idea', '.git', '__p
 
 # Per-mod files that sync should never overwrite (relative paths, as yielded by iter_tmpl_files)
 SKIP_FILES = {
+    #because this is a CLIENT-only mod, it has some unique settings
     'AutoRun': {
+        os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
+        os.path.join('build.gradle'),
+    },
+    #because this mod uses MIXINS
+    'CustomGameRules': {
         os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
         os.path.join('build.gradle'),
     },
