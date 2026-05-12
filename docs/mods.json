@@ -1,5 +1,50 @@
 [
   {
+    "id": "absentbydesign",
+    "name": "Absent by Design",
+    "description": "Add stairs, walls, slabs, fences to existing blocks, fully resource pack compatible.",
+    "category": "building",
+    "minecraft_versions": ["1.21.1", "1.20.1"],
+    "curse_slug": "absent-by-design",
+    "modrinth_id": "absent-by-design"
+  },
+  {
+    "id": "angermanagement",
+    "name": "Anger Management",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.16.5"],
+    "curse_slug": "anger-management",
+    "modrinth_id": ""
+  },
+  {
+    "id": "antibonemeal",
+    "name": "Anti Bonemeal",
+    "description": "Bonemeal use has been disabled since it lets you dupe wood; its too overpowered.",
+    "category": "tweaks",
+    "minecraft_versions": ["1.21.1","1.20.1"],
+    "curse_slug": "anti-bonemeal",
+    "modrinth_id": "anti-bonemeal"
+  },
+  {
+    "id": "autoplant",
+    "name": "Auto Plant",
+    "description": "Sapling items auto plant themselves they despawn on viable grass.",
+    "category": "tweaks",
+    "minecraft_versions": ["1.21.1","1.20.1"],
+    "curse_slug": "auto-plant",
+    "modrinth_id": "auto-plant"
+  },
+  {
+    "id": "autorun",
+    "name": "AutoRun",
+    "description": "Client-side toggle to automatically keep running without holding a key.",
+    "category": "tweaks",
+    "minecraft_versions": ["1.21.1","1.20.1"],
+    "curse_slug": "auto-sprint",
+    "modrinth_id": "auto-sprint-key"
+  },
+  {
     "id": "blocklayering",
     "name": "Block Layers",
     "description": "New layered blocks (concrete, sand, leaves, etc) that you place exactly like snow layers.",
@@ -18,6 +63,15 @@
     "modrinth_id": "blocky-doors"
   },
   {
+    "id": "cobblestoney",
+    "name": "cobblestoney",
+    "description": "Cobbled versions of granite/andesite/etc blocks are dropped, also new stone and mud block variants are added ",
+    "category": "world",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "cobblestoney",
+    "modrinth_id": ""
+  },
+  {
     "id": "colouredstuff",
     "name": "Coloured Stuff",
     "description": "Adds new blocks for each dye color, water, wood, stone, and more ",
@@ -27,21 +81,30 @@
     "modrinth_id": "coloured-stuff"
   },
   {
-    "id": "glasscutter",
-    "name": "Glass Cutter",
-    "description": "New tool that insta-mines glass and harvests it with no silk tocuh needed.",
-    "category": "tools",
+    "id": "creeperheal",
+    "name": "Creeper Heal",
+    "description": "Terrain damaged by creeper explosions gradually heals itself back.",
+    "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "glass-cutter",
-    "modrinth_id": "glass-cutter"
+    "curse_slug": "forge-creeper-heal-unofficial",
+    "modrinth_id": "creeper-heal"
   },
   {
-    "id": "stonecutterlikeswood",
-    "name": "Stonecutter Likes Wood",
-    "description": "Allows wood and wood products to be processed in the stonecutter.",
-    "category": "building",
+    "id": "cyclic",
+    "name": "Cyclic",
+    "description": "Adds way too much content",
+    "category": "tech",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "stonecutter-likes-wood",
+    "curse_slug": "cyclic",
+    "modrinth_id": ""
+  },
+  {
+    "id": "dimension-stacking-rifts",
+    "name": "dimension-stacking-rifts",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.17"],
+    "curse_slug": "dimension-stacking-rifts",
     "modrinth_id": ""
   },
   {
@@ -54,77 +117,40 @@
     "modrinth_id": ""
   },
   {
-    "id": "cyclic",
-    "name": "Cyclic",
-    "description": "Adds way too much content",
-    "category": "tech",
+    "id": "enchantingrunes",
+    "name": "Enchanting Runes",
+    "description": "Get early game enchanted goods with a rune-based enchanting system as an alternative to vanilla enchanting.",
+    "category": "items",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "cyclic",
+    "curse_slug": "runes",
     "modrinth_id": ""
   },
   {
-    "id": "storagenetwork",
-    "name": "Simple Storage Network",
-    "description": "Network connected chests for mass storage",
-    "category": "tech",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "storagenetwork",
-    "modrinth_id": ""
-  },
-  {
-    "id": "oceanfloor",
-    "name": "Ocean Floor Control",
-    "description": "Configure clay, sand, and gravel features to on the ocean floor, a throwback to old world generation before everything was gravel.",
-    "category": "world",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "ocean-floor-clay-sand-and-dirt",
-    "modrinth_id": ""
-  },
-  {
-    "id": "veincreeper",
-    "name": "Vein Creeper",
-    "description": "Creepers that convert stone into ore when detonated.",
-    "category": "mobs",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "vein-creeper",
-    "modrinth_id": "vein-creeper"
-  },
-  {
-    "id": "creeperheal",
-    "name": "Creeper Heal",
-    "description": "Terrain damaged by creeper explosions gradually heals itself back.",
+    "id": "fragiletorches",
+    "name": "Fragile Torches",
+    "description": "Torches get broken by gettining walked into by living creatures; adds more survival challenge.",
     "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "forge-creeper-heal-unofficial",
-    "modrinth_id": "creeper-heal"
-  },
-  {
-    "id": "letthemgrow",
-    "name": "Let Them Grow",
-    "__comment": "TODO: upgrade refactor split here ",
-    "description": "A small mod to slow down growth of crops and livestock.",
-    "category": "tweaks",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "let-them-grow",
+    "curse_slug": "fragile-torches",
     "modrinth_id": ""
   },
   {
-    "id": "absentbydesign",
-    "name": "Absent by Design",
-    "description": "Add stairs, walls, slabs, fences to existing blocks, fully resource pack compatible.",
-    "category": "building",
-    "minecraft_versions": ["1.21.1", "1.20.1"],
-    "curse_slug": "absent-by-design",
-    "modrinth_id": "absent-by-design"
+    "id": "gardentools",
+    "name": "Garden Tools",
+    "description": "Specialised tools that make tilling, planting, and harvesting faster.",
+    "category": "farming",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "garden-tools",
+    "modrinth_id": "gardening-tools"
   },
   {
-    "id": "autorun",
-    "name": "AutoRun",
-    "description": "Client-side toggle to automatically keep running without holding a key.",
-    "category": "tweaks",
-    "minecraft_versions": ["1.21.1","1.20.1"],
-    "curse_slug": "auto-sprint",
-    "modrinth_id": "auto-sprint-key"
+    "id": "glasscutter",
+    "name": "Glass Cutter",
+    "description": "New tool that insta-mines glass and harvests it with no silk tocuh needed.",
+    "category": "tools",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "glass-cutter",
+    "modrinth_id": "glass-cutter"
   },
   {
     "id": "heartbalance",
@@ -134,6 +160,24 @@
     "minecraft_versions": ["1.20.1"],
     "curse_slug": "heart-balance",
     "modrinth_id": "heart-balance"
+  },
+  {
+    "id": "invcrafting",
+    "name": "Inventory Crafting Grid",
+    "description": "Inventory crafting is now 3x3",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "inventory-crafting-grid",
+    "modrinth_id": ""
+  },
+  {
+    "id": "letthemgrow",
+    "name": "Let Them Grow",
+    "description": "A small mod to slow down growth of crops and livestock.",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "let-them-grow",
+    "modrinth_id": ""
   },
   {
     "id": "mountedpearl",
@@ -154,12 +198,21 @@
     "modrinth_id": ""
   },
   {
-    "id": "horsestandstill",
-    "name": "Stupid Horse Stand Still",
-    "description": "Saddled Horses stay put when you un-mount them (similar to NoAI) instead of wandering away",
+    "id": "nutsandfruit",
+    "name": "NutsAndFruit",
+    "description": "",
     "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "stupid-horse-stand-still",
+    "curse_slug": "nuts-and-fruit",
+    "modrinth_id": ""
+  },
+  {
+    "id": "oceanfloor",
+    "name": "Ocean Floor Control",
+    "description": "Configure clay, sand, and gravel features to on the ocean floor, a throwback to old world generation before everything was gravel.",
+    "category": "world",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "ocean-floor-clay-sand-and-dirt",
     "modrinth_id": ""
   },
   {
@@ -172,61 +225,6 @@
     "modrinth_id": ""
   },
   {
-    "id": "antibonemeal",
-    "name": "Anti Bonemeal",
-    "description": "Bonemeal use has been disabled since it lets you dupe wood; its too overpowered.",
-    "category": "tweaks",
-    "minecraft_versions": ["1.21.1","1.20.1"],
-    "curse_slug": "anti-bonemeal",
-    "modrinth_id": "anti-bonemeal"
-  },
-  {
-    "id": "fragiletorches",
-    "name": "Fragile Torches",
-    "description": "Torches get broken by gettining walked into by living creatures; adds more survival challenge.",
-    "category": "tweaks",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "fragile-torches",
-    "modrinth_id": ""
-  },
-  {
-    "id": "autoplant",
-    "name": "Auto Plant",
-    "description": "Sapling items auto plant themselves they despawn on viable grass.",
-    "category": "tweaks",
-    "minecraft_versions": ["1.21.1","1.20.1"],
-    "curse_slug": "auto-plant",
-    "modrinth_id": "auto-plant"
-  },
-  {
-    "id": "gardentools",
-    "name": "Garden Tools",
-    "description": "Specialised tools that make tilling, planting, and harvesting faster.",
-    "category": "farming",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "garden-tools",
-    "modrinth_id": "gardening-tools"
-  },
-  {
-    "id": "strongfarmland",
-    "name": "Stronger Farmland",
-    "description": "Farmland, anytime that it is wet, will resist being trampled by players and mobs.",
-    "category": "farming",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "stronger-farmland",
-    "modrinth_id": "stronger-farmland"
-  },
-  {
-    "id": "scraps",
-    "name": "Scraps",
-    "description": "Turn leftover and partial resources into useful crafting materials, junk piles spawn in world.",
-    "category": "world",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "scraps",
-    "modrinth_id": ""
-  },
-
-  {
     "id": "pickybags",
     "name": "Picky Bags",
     "description": "Bags that auto-collect only the specific item types.",
@@ -236,12 +234,12 @@
     "modrinth_id": ""
   },
   {
-    "id": "enchantingrunes",
-    "name": "Enchanting Runes",
-    "description": "Get early game enchanted goods with a rune-based enchanting system as an alternative to vanilla enchanting.",
-    "category": "items",
+    "id": "plaingrinder",
+    "name": "Plain Grinder",
+    "description": "",
+    "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "runes",
+    "curse_slug": "plain-grinder",
     "modrinth_id": ""
   },
   {
@@ -254,22 +252,76 @@
     "modrinth_id": ""
   },
   {
-    "id": "cobblestoney",
-    "name": "cobblestoney",
-    "description": "Cobbled versions of granite/andesite/etc blocks are dropped, also new stone and mud block variants are added ",
-    "category": "world",
+    "id": "gamerules",
+    "name": "Powerful Game Rules",
+    "description": "Adds 49+ new game rules",
+    "category": "tweaks",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "cobblestoney",
+    "curse_slug": "custom-game-rules",
+    "modrinth_id": "powerful-game-rules"
+  },
+  {
+    "id": "scaffoldingbehavior",
+    "name": "ScaffoldingBehavior",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "scaffolding-behavior",
     "modrinth_id": ""
   },
   {
-    "id": "villagertools",
-    "name": "Villager Artifacts",
-    "description": "Make villagers more useful with many items to use and improve them",
-    "category": "tools",
+    "id": "scraps",
+    "name": "Scraps",
+    "description": "Turn leftover and partial resources into useful crafting materials, junk piles spawn in world.",
+    "category": "world",
     "minecraft_versions": ["1.20.1"],
-    "curse_slug": "villager-tools",
-    "modrinth_id": "villager-tools"
+    "curse_slug": "scraps",
+    "modrinth_id": ""
+  },
+  {
+    "id": "storagenetwork",
+    "name": "Simple Storage Network",
+    "description": "Network connected chests for mass storage",
+    "category": "tech",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "storagenetwork",
+    "modrinth_id": ""
+  },
+  {
+    "id": "stonecutterlikeswood",
+    "name": "Stonecutter Likes Wood",
+    "description": "Allows wood and wood products to be processed in the stonecutter.",
+    "category": "building",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "stonecutter-likes-wood",
+    "modrinth_id": ""
+  },
+  {
+    "id": "strongfarmland",
+    "name": "Stronger Farmland",
+    "description": "Farmland, anytime that it is wet, will resist being trampled by players and mobs.",
+    "category": "farming",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "stronger-farmland",
+    "modrinth_id": "stronger-farmland"
+  },
+  {
+    "id": "horsestandstill",
+    "name": "Stupid Horse Stand Still",
+    "description": "Saddled Horses stay put when you un-mount them (similar to NoAI) instead of wandering away",
+    "category": "tweaks",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "stupid-horse-stand-still",
+    "modrinth_id": ""
+  },
+  {
+    "id": "tamedrespawn",
+    "name": "tamedrespawn",
+    "description": "",
+    "category": "tweaks",
+    "minecraft_versions": ["1.19.2"],
+    "curse_slug": "tamedrespawn",
+    "modrinth_id": ""
   },
   {
     "id": "tinylightbulbs",
@@ -281,44 +333,6 @@
     "modrinth_id": "tiny-light-bulbs"
   },
   {
-    "id": "invcrafting",
-    "name": "Inventory Crafting Grid",
-    "description": "Inventory crafting is now 3x3",
-    "category": "tweaks",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "inventory-crafting-grid",
-    "modrinth_id": ""
-  },
-  {
-    "id": "nutsandfruit",
-    "name": "NutsAndFruit",
-    "description": "",
-    "category": "tweaks",
-    "minecraft_versions": ["1.20.1"],
-    "curse_slug": "nuts-and-fruit",
-    "modrinth_id": ""
-  },
-  {
-    "id": "angermanagement",
-    "name": "Anger Management",
-    "description": "",
-    "category": "tweaks",
-    "minecraft_versions": ["1.16.5"],
-    "curse_slug": "anger-management",
-    "modrinth_id": ""
-  },
-
-  {
-    "id": "tamedrespawn",
-    "name": "tamedrespawn",
-    "description": "",
-    "category": "tweaks",
-    "minecraft_versions": ["1.19.2"],
-    "curse_slug": "tamedrespawn",
-    "modrinth_id": ""
-  },
-
-  {
     "id": "unbreakablespawner",
     "name": "UnbreakableSpawner",
     "description": "",
@@ -328,15 +342,21 @@
     "modrinth_id": ""
   },
   {
-    "id": "dimension-stacking-rifts",
-    "name": "dimension-stacking-rifts",
-    "description": "",
-    "category": "tweaks",
-    "minecraft_versions": ["1.17"],
-    "curse_slug": "dimension-stacking-rifts",
-    "modrinth_id": ""
+    "id": "veincreeper",
+    "name": "Vein Creeper",
+    "description": "Creepers that convert stone into ore when detonated.",
+    "category": "mobs",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "vein-creeper",
+    "modrinth_id": "vein-creeper"
+  },
+  {
+    "id": "villagertools",
+    "name": "Villager Artifacts",
+    "description": "Make villagers more useful with many items to use and improve them",
+    "category": "tools",
+    "minecraft_versions": ["1.20.1"],
+    "curse_slug": "villager-tools",
+    "modrinth_id": "villager-tools"
   }
-
-
-
 ]

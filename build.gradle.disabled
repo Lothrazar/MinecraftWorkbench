@@ -1,9 +1,0 @@
-subprojects {
-    tasks.configureEach { task ->
-        if (task.name == 'wrapper') task.enabled = false
-    }
-}
-
-tasks.named('wrapper', Wrapper).configure {
-    distributionType = Wrapper.DistributionType.BIN
-}
