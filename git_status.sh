@@ -21,6 +21,7 @@ for dir in "$WORKBENCH"/*/; do
   [ -d "$dir/.git" ] || continue
 
   name=$(basename "$dir")
+ # git -C "$dir" add .  # use this to clear CRLF issues
   branch=$(git -C "$dir" symbolic-ref --short HEAD 2>/dev/null || git -C "$dir" rev-parse --short HEAD 2>/dev/null)
   status=$(git -C "$dir" status --porcelain 2>/dev/null)
   ahead=$(git -C "$dir" rev-list --count @{u}..HEAD 2>/dev/null)

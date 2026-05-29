@@ -35,6 +35,10 @@ SKIP_FILES = {
     'CustomGameRules': {
         os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
     },
+    'Cyclic': {
+        os.path.join('.gitignore'),
+    },
+    # tmpl meta files that are not exported
     '*': {
         os.path.join('README.md'),
         os.path.join('extra.gradle'),
