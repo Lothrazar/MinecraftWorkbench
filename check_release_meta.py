@@ -2,7 +2,7 @@ import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SKIP = {"tmpl", "build", "gradle", "docs"}
-BLANK = "(blank)"
+BLANK = "!!!"
 
 entries = sorted(
   d for d in os.listdir(ROOT)
@@ -24,14 +24,14 @@ for folder in entries:
   props_path = os.path.join(ROOT, folder, "mod.properties")
   curse = read_prop(props_path, "curse_id")
   modrinth = read_prop(props_path, "modrinth_id")
-  rows.append((folder, curse or BLANK, modrinth or BLANK))
+  rows.append((folder, curse if curse not in (None, "0") else BLANK, modrinth or BLANK))
 
 col0 = max(len(r[0]) for r in rows) if rows else 8
 col1 = max(len(r[1]) for r in rows) if rows else 5
 col2 = max(len(r[2]) for r in rows) if rows else 8
 
-header = f"{'Name':{col0}}  {'CURSEFORGE':{col1}}  {'MODRINTH':{col2}}"
+header = f"{'':{col0}}    {'CURSEFORGE':{col1}}   {'MODRINTH':{col2}}"
 print(header)
 print("-" * len(header))
 for name, curse, modrinth in rows:
-  print(f"{name:{col0}}  {curse:{col1}}  {modrinth:{col2}}")
+  print(f"{name:{col0}}    {curse:{col1}}      {modrinth:{col2}}")

@@ -35,8 +35,13 @@ SKIP_FILES = {
     'CustomGameRules': {
         os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
     },
+    'Storage-Network': {
+        os.path.join('build.gradle'),
+    },
+    # custom gitignore. also mixins
     'Cyclic': {
         os.path.join('.gitignore'),
+        os.path.join('src', 'main', 'templates', 'META-INF', 'neoforge.mods.toml'),
     },
     # tmpl meta files that are not exported
     '*': {

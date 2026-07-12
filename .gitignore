@@ -1,8 +1,9 @@
 # ignore some root files
 gradlew
 gradlew.bat
+TODO.md
 
-# Ignore every subfolder (every mod
+# Ignore every subfolder (every mod)
 */
 
 # ONLY include these folders:   tmpl  and its contents
