@@ -1,14 +1,14 @@
 rootProject.name = 'mc261-mods'
 
-//include 'AbsentByDesign'
-//include 'AntiBonemeal'
+include 'AbsentByDesign'
+include 'AntiBonemeal'
 //include 'AutoPlant'
 //include 'AutoRun'
 //include 'BlockLayers'
 //include 'BlockyDoors'
 //include 'Cobblestoney'
 //include 'ColouredStuff'
-//include 'CreeperHeal'
+include 'CreeperHeal'
 //include 'CustomGameRules'
 //include 'Cyclic'
 //include 'ElementaryOres'
@@ -42,9 +42,7 @@ include 'TemplateMod'
 //include 'UnbreakableSpawner'
 //include 'VeinCreeper'
 //include 'VillagerTools'
-//
-//// untested mods
-//include 'GlowBerriesGlowing'
+
+// unreleased mods
 //include 'ShiftClickVillagerTrading'
-//include 'FeedingTroughs'
-//include 'StrippableMushroomBlocks'
+include 'StrippableMushroomBlocks'
