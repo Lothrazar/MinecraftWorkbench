@@ -16,7 +16,6 @@ include 'EnchantingRunes'
 include 'FragileTorches'
 include 'GardenTools'
 include 'GlassCutter'
-include 'GlowBerriesGlowing'
 include 'HeartBalance'
 include 'InventoryCrafting'
 include 'LetThemGrow'
@@ -43,8 +42,6 @@ include 'UnbreakableSpawner'
 include 'VeinCreeper'
 include 'VillagerTools'
 
-// untested mods
-include 'GlowBerriesGlowing'
+// unreleased mods
 include 'ShiftClickVillagerTrading'
-include 'FeedingTroughs'
 include 'StrippableMushroomBlocks'

@@ -45,6 +45,7 @@ SKIP_FILES = {
     },
     # tmpl meta files that are not exported
     '*': {
+        os.path.join('LICENSE'),
         os.path.join('README.md'),
         os.path.join('extra.gradle'),
     },
