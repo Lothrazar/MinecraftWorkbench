@@ -21,6 +21,7 @@ for dir in "$WORKBENCH"/*/; do
   fi
 
   echo "── $name ──"
-  git -C "$dir" commit -am "$MSG"
+  git -C "$dir" add -A
+  git -C "$dir" commit -m "$MSG"
   echo ""
 done
