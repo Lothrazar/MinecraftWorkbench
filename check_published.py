@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 """
-check_published.py — Compare local mod versions against CurseForge and Modrinth.
+check_published.py - Compare local mod versions against CurseForge and Modrinth.
 API keys are read from ~/.gradle/gradle.properties and are never printed or committed.
+
+CurseForge/Modrinth lookups are filtered to each mod's local `minecraft_version` (from its
+gradle.properties) - a mod with no published build for that exact game version shows "-" on that
+platform rather than falling back to some other version's latest.
 
 Example output:
 
-Mod Name               Local           CurseForge                          Modrinth
----------------------  --------------  ----------------------------------  -------------
-Absent by Design       1.21.1-1.9.2    1.21.1-1.9.2                        1.21.1-1.9.2
-AntiBonemeal           1.21.1-1.0.2    1.21.1-1.0.2                        1.20.1-1.0.2
-autoplant              1.21.1-1.0.2    1.21.1-1.0.2                        1.21.1-1.0.2
-AutoRun                1.21.1-1.1.2    1.21.1-1.1.2                        1.20.1-1.1.1
-blocklayering          1.21.1-1.0.3    1.21.1-1.0.3                        1.20.1-1.0.3
-blockydoors            1.21.1-1.0.1*   1.20.1-1.0.1                        1.20.1-1.0.1
-cobblestoney           1.21.1-1.0.1*   1.20.1-1.0.1                        —
-colouredstuff          1.21.1-1.3.4*   1.20.1-1.3.4                        1.20.1-1.3.4
+Mod Name               Local           CurseForge      Modrinth
+---------------------  --------------  --------------  -------------
+Absent by Design       1.21.1-1.9.2    1.21.1-1.9.2    1.21.1-1.9.2
+AntiBonemeal           1.21.1-1.0.2    1.21.1-1.0.2    -
+autoplant              1.21.1-1.0.2    1.21.1-1.0.2    1.21.1-1.0.2
+AutoRun                1.21.1-1.1.2    1.21.1-1.1.2    -
+blocklayering          1.21.1-1.0.3    1.21.1-1.0.3    -
+blockydoors            1.21.1-1.0.1*   -               -
+cobblestoney           1.21.1-1.0.1*   -               -
+colouredstuff          1.21.1-1.3.4*   -               -
 
 """
 
@@ -22,6 +26,7 @@ colouredstuff          1.21.1-1.3.4*   1.20.1-1.3.4                        1.20.
 import json
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -54,8 +59,11 @@ def http_get(url, headers=None):
     return None
 
 
-def get_curse_latest(curse_id, cf_key, mod_name):
+def get_curse_latest(curse_id, cf_key, mod_name, mc_version):
+  qs = urllib.parse.urlencode({"gameVersion": mc_version}) if mc_version else ""
   url = f"https://api.curseforge.com/v1/mods/{curse_id}/files"
+  if qs:
+    url += f"?{qs}"
   data = http_get(url, {"x-api-key": cf_key, "Accept": "application/json"})
   if not data or not data.get("data"):
     return ""
@@ -71,7 +79,7 @@ def curse_version_normalized(display, mod_name, mod_id):
     "modid-1.21.1-1.0.2.jar"      → "1.21.1-1.0.2"
   """
   s = display.strip()
-  # "ModName 1.21.1-1.0.2" style — case-insensitive prefix strip
+  # "ModName 1.21.1-1.0.2" style - case-insensitive prefix strip
   for prefix in [mod_name + " ", mod_id + " "]:
     if s.lower().startswith(prefix.lower()):
       return s[len(prefix):]
@@ -84,10 +92,13 @@ def curse_version_normalized(display, mod_name, mod_id):
   return s
 
 
-def get_modrinth_latest(modrinth_id, mr_token):
+def get_modrinth_latest(modrinth_id, mr_token, mc_version):
   if not modrinth_id:
     return ""
+  qs = urllib.parse.urlencode({"game_versions": json.dumps([mc_version])}) if mc_version else ""
   url = f"https://api.modrinth.com/v2/project/{modrinth_id}/version"
+  if qs:
+    url += f"?{qs}"
   headers = {"Authorization": mr_token} if mr_token else {}
   data = http_get(url, headers)
   if not isinstance(data, list) or not data:
@@ -141,8 +152,8 @@ def main():
     modrinth_id = mod_props.get("modrinth_id", "").strip()
 
     print(f"  {mod_name}...", end="", flush=True)
-    curse_ver = get_curse_latest(curse_id, cf_key, mod_name) if curse_id else ""
-    mr_ver = get_modrinth_latest(modrinth_id, mr_token)
+    curse_ver = get_curse_latest(curse_id, cf_key, mod_name, mc_version) if curse_id else ""
+    mr_ver = get_modrinth_latest(modrinth_id, mr_token, mc_version)
     print(" done")
 
     curse_display = curse_version_normalized(curse_ver, mod_name, mod_id) if curse_ver else ""
@@ -152,7 +163,7 @@ def main():
     if curse_display and local_ver != curse_display:
       local_display = local_ver + "*"
 
-    rows.append((mod_name, local_display, curse_display or "—", mr_ver or "—"))
+    rows.append((mod_name, local_display, curse_display or "-", mr_ver or "-"))
 
   headers = ("Mod Name", "Local", "CurseForge", "Modrinth")
   widths = [len(h) for h in headers]

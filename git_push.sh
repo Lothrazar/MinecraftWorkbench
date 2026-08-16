@@ -10,5 +10,6 @@ for dir in "$WORKBENCH"/*/; do
 
   echo "── $name ──"
   git -C "$dir" push
+  git -C "$dir" push --tags
   echo ""
 done
